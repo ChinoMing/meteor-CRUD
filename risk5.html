@@ -1,0 +1,29 @@
+<head>
+    <title>Basic CRUD template for Meteor</title>
+</head>
+
+<body>
+    <h1>CRUD in Meteor</h1>
+    <form action="" class="new-task">
+        <input type="text" name="text" placeholder="Type here">
+    </form>
+
+    <ul>
+        {{#each hellos}} {{> hello}} {{/each}}
+    </ul>
+</body>
+
+<template name="hello">
+    <li>
+        {{text}}
+
+        <button class="delete btn btn-default">Delete</button>
+
+        <form class="edit form-inline">
+            <div class="form-group">
+                <input type="text" class="form-control" name="exampleEdit" placeholder="Edit">
+            </div>
+            <button type="edit" class="btn btn-default">Submit</button>
+        </form>
+    </li>
+</template>
